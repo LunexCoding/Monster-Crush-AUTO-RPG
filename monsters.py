@@ -20,10 +20,10 @@ class NormalMonster(Monster):
 class BossMonster(Monster):
     def __init__(self, HP):
         self._HP = HP * 2
-        self.getMsg()
+        self.showHP()
 
-    def getMsg(self):
-        return ''.join('Boss monster created, HP = ' + str(self._HP))
+    def showHP(self):
+        return "У монстра {} HP.".format(self._HP)
 
 
 class MonsterFactory:
